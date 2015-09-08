@@ -2,6 +2,7 @@ package main
 
 import(
 	"os"
+	"fmt"
 	"github.com/codegangsta/cli"
 )
 
@@ -20,6 +21,18 @@ func main(){
 
 		},
 	}
+	app.Commands = []cli.Command{
+		{
+			Name: "describeit",
+			Aliases: []string{"d"},
+			Usage: "use it to see a description",
+			Description: "This is how we describe describeit the function",
+			Action: func(c *cli.Context){
+				fmt.Printf("I like to describe things")
+			},
+		},
+	}	
+
 	app.Authors = []cli.Author{author}
 	app.Action = func(c *cli.Context){
 		name := "someone"
