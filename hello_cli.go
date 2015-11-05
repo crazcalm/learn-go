@@ -31,7 +31,7 @@ func main(){
 				fmt.Printf("I like to describe things")
 			},
 		},
-	}	
+	}
 
 	app.Authors = []cli.Author{author}
 	app.Action = func(c *cli.Context){
