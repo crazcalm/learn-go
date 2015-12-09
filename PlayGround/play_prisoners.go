@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	days := flag.Int("days", 10000, "Number of days to pass")
+	days := flag.Int("days", 1000, "Number of days to pass")
 	prisoners := flag.Int("prisoners", 100, "Number of prisoners")
 
 	flag.Parse()
