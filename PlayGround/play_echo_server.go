@@ -48,6 +48,8 @@ func HandleConn(conn net.Conn) {
 	defer conn.Close()
 	input := bufio.NewScanner(conn)
 	for input.Scan() {
-		fmt.Fprintln(conn, "Received: "+input.Text())
+        testing := input.Text()
+        fmt.Println("Text: " + testing)
+		fmt.Fprintln(conn, "Received: "+testing)
 	}
 }
