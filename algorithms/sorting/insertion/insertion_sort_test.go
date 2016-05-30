@@ -6,18 +6,25 @@ func TestInsertion(t *testing.T) {
     var tests = []struct {
         input []int
         expected []int
+        result bool
     }{
         {
             []int{1,2,5,6,3,4},
             []int{1,2,3,4,5,5},
+            false,
+        },
+        {
+            []int{6,5,4,3,2,1},
+            []int{1,2,3,4,5,6},
+            true,
         },
     }
 
     for _, test :=range tests {
         answer := Insertion(test.input)
         result := isEqual(test.expected, answer)
-        if result == false {
-            t.Errorf("%s =! %s", answer, test.expected)
+        if result != test.result {
+            t.Errorf("%v =! %v", answer, test.expected)
         }
     }
 }
