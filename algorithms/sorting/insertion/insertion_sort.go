@@ -7,10 +7,7 @@ func Insertion(list[] int) [] int {
         key := list[i]
         // inser list[i] in sorted sequence list[0...i - 1]
         k := i -1
-        for k >= 0 {
-            if list[k] <= key{
-                break
-            }
+        for k >= 0  && list[k] > key {
             list[k + 1] = list[k]
             k = k - 1
         }
