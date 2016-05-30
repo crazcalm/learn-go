@@ -18,7 +18,6 @@ func main(){
     fmt.Println("index int(rune)rune char bytes")
 
     for index, rune := range str2{
-        fmt.Printf("%-2d %d %U %c %X\n", index, rune, rune, rune, 
-[]byte(string(rune)))
+        fmt.Printf("%-2d %d %U %c %X\n", index, rune, rune, rune, []byte(string(rune)))
     }
 }
